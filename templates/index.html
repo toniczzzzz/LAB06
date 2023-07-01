@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consulta de información sobre el Pokémon</title>
+    <style>
+        body {
+            font-family: Times, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 100px;
+        }
+        form {
+            margin-top: 50px;
+        }
+        input[type=text] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #000;;
+            border-radius: 8px;
+        }
+        
+        button[type=submit] {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: 1px solid #000;;
+            border-radius: 4px;
+            background-color: #4CAF50;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Consulta de información de Pokémon</h1>
+    <form action="/get_info" method="POST">
+        <label for="pokemon_name">Nombre del Pokémon:</label>
+        <input type="text" id="pokemon_name" name="pokemon_name" required>
+        <br>
+        <button type="submit">Consulta</button>
+    </form>
+</body>
+</html>

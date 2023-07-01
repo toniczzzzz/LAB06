@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultado de consulta</title>
+</head>
+<body>
+    <h1>Resultado de la consulta para <strong>{{ pokemon_name }}</strong></h1>
+    {% if pokemon_info %}
+        <p>El tipo de <strong>{{ pokemon_name }}</strong> es: {{ pokemon_info['types'] }}</p>
+        <p>Los movimientos de <strong>{{ pokemon_name }}</strong> son: {{ pokemon_info['moves'] }}</p>
+        <p>Imágenes de <strong>{{pokemon_name}}</strong> de su version normal y shiny:</p>
+        <img src="{{ pokemon_info['front_default'] }}" alt="Front Default">
+        <img src="{{ pokemon_info['front_shiny'] }}" alt="Front Shiny">
+        <img src="{{ pokemon_info['back_default'] }}" alt="Back Default">
+        <img src="{{ pokemon_info['back_shiny'] }}" alt="Back Shiny">
+    {% else %}
+        <p>No se encontró información para el Pokémon <strong>{{ pokemon_name }}</strong>.</p>
+    {% endif %}
+</body>
+</html>
